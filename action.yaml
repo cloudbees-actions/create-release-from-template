@@ -1,0 +1,26 @@
+name: Create a CD/RO release from a template
+inputs:
+  templateProjectName:
+    description: The template catalog project name
+    required: true
+  templateCatalogName:
+    description: The template catalog name
+    required: true
+  templateName:
+    description: The template name
+    required: true
+  actualParameter:
+    required: false
+  
+runs:
+  using: "composite"
+  steps:
+    - name: runCatalogItem API
+      uses: cloudbees/cdro-actions/eval-dsl@main
+      with:
+        dsl: runCatalogItem args
+        dsl-args: |
+          projectName: ${{ inputs.templateProjectName }}
+          catalogName: ${{ inputs.templateCatalogName }}
+          catalogItemName: ${{ inputs.templateName }}
+        dsl-actual-parameter: ${{ inputs.actualParameter }}
