@@ -16,7 +16,7 @@ runs:
   using: "composite"
   steps:
     - name: runCatalogItem API
-      uses: cloudbees/cdro-actions/eval-dsl@v1
+      uses: cloudbees-actions/eval-dsl@v1
       with:
         dsl: runCatalogItem args
         dsl-args: |

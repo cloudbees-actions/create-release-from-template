@@ -16,7 +16,7 @@ steps:
     env:
       CDRO_URL: ${{ secrets.CDRO_URL }}
       CDRO_TOKEN: ${{ secrets.CDRO_TOKEN }}
-    uses: cloudbees/cdro-actions/create-release-from-template@main
+    uses: cloudbees-actions/create-release-from-template@main
     with:
       templateProjectName: Electric Cloud
       templateCatalogName: Releases
@@ -61,7 +61,7 @@ jobs:
     steps:
 
       - name: Create release
-        uses: cloudbees/cdro-actions/create-release-from-template@main
+        uses: cloudbees-actions/create-release-from-template@main
         with:
           templateProjectName: Electric Cloud
           templateCatalogName: Releases
@@ -77,7 +77,7 @@ jobs:
               releaseEndDate: "2023-06-20"
      
       - name: Start release
-        uses: cloudbees/cdro-actions/start-release@main
+        uses: cloudbees-actions/start-release@main
         with:
           projectName: Default
           releaseName: SSC Generated
