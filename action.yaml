@@ -1,4 +1,8 @@
 name: Create a CD/RO release from a template
+branding:
+  icon: 'command'
+  color: 'blue'
+  
 inputs:
   templateProjectName:
     description: The template catalog project name
