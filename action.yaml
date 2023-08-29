@@ -1,4 +1,5 @@
 name: Create a CD/RO release from a template
+description: Create a release on a remote CloudBees CD/RO instance from a self-service catalog item
 branding:
   icon: 'command'
   color: 'blue'
