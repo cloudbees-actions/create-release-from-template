@@ -33,3 +33,4 @@ runs:
           catalogName: ${{ inputs.templateCatalogName }}
           catalogItemName: ${{ inputs.templateName }}
         dsl-actual-parameter: ${{ inputs.actualParameter }}
+        ignore-unverified-cert: ${{ inputs.ignore-unverified-cert }}
